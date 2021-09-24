@@ -23,5 +23,9 @@ class LoginViewController: UIViewController, StoryboardProtocol {
     @IBAction func register(_ sender: Any) {
         coordinator?.redirectRegister()
     }
+    
+    deinit {
+        print("\(type(of: self)) deinited.")
+    }
 
 }

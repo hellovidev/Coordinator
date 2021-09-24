@@ -11,10 +11,10 @@ class DashboardViewController: UIViewController, StoryboardProtocol {
     
     weak var coordinator: DashboardCoordinator?
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        coordinator?.didFinish()
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        coordinator?.didFinish()
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,9 @@ class DashboardViewController: UIViewController, StoryboardProtocol {
         // Do any additional setup after loading the view.
     }
     
+    deinit {
+        print("\(type(of: self)) deinited.")
+    }
     
     /*
      // MARK: - Navigation

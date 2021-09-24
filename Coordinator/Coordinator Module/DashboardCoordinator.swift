@@ -25,8 +25,11 @@ class DashboardCoordinator: CoordinatorProtocol {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func didFinish() {
-        parentCoordinator?.childDidFinish(self)
+    deinit {
+        print("\(type(of: self)) deinited.")
     }
+//    func didFinish() {
+//        parentCoordinator?.childDidFinish(self)
+//    }
     
 }

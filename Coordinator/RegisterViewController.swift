@@ -16,6 +16,10 @@ class RegisterViewController: UIViewController, StoryboardProtocol {
 
         // Do any additional setup after loading the view.
     }
+    
+    deinit {
+        print("\(type(of: self)) deinited.")
+    }
 
     /*
     // MARK: - Navigation
